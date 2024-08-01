@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restrauntsysteme.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="561.0" prefWidth="435.0">
+         <effect>
+            <ColorAdjust brightness="-0.16" hue="0.03" saturation="0.12" />
+         </effect>
+         <children>
+            <AnchorPane fx:id="pi_regSideForm" prefHeight="566.0" prefWidth="428.0" stylesheets="@LoginDesgin.css">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="158.0" layoutX="-20.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/mrrofa.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="158.0" layoutY="414.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/taba9.png" />
+                     </image>
+                  </ImageView>
+                  <FontAwesomeIconView fill="#ffb000" glyphName="USERS" layoutX="193.0" layoutY="78.0" size="4.5EM" />
+                  <Label layoutX="105.0" layoutY="98.0" text="Register Account">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="142.0" text="hello friends" textFill="#ffb000">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pi_reg_Username" layoutX="92.0" layoutY="223.0" prefHeight="34.0" prefWidth="251.0" promptText="Username" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                  <PasswordField fx:id="pi_reg_password" layoutX="92.0" layoutY="281.0" prefHeight="34.0" prefWidth="251.0" promptText="Password" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                  <ComboBox fx:id="pi_reg_Question" layoutX="92.0" layoutY="343.0" prefHeight="32.0" prefWidth="251.0" promptText="Question" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                  <TextField fx:id="pi_reg_answer" layoutX="92.0" layoutY="400.0" prefHeight="34.0" prefWidth="251.0" promptText="Answer" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                  <Button fx:id="pi_reg_SignUp" layoutX="98.0" layoutY="459.0" mnemonicParsing="false" onAction="#RegisterBtn" prefHeight="29.0" prefWidth="240.0" styleClass="btn-login" stylesheets="@LoginDesgin.css" text="Sign Up">
+                     <font>
+                        <Font name="Arial Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="pi_reg_loginNow" layoutX="98.0" layoutY="505.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="29.0" prefWidth="240.0" styleClass="btn-havet" stylesheets="@LoginDesgin.css" text="Login Now!!!" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="si_SideLoginForm" prefHeight="585.0" prefWidth="431.0">
+         <children>
+            <ImageView fx:id="si_log_image" fitHeight="581.0" fitWidth="387.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Eaten%20Festival%20H5%20Food%20Promotion%20Poster%20Background%20Psd%20Layered%20Download%20Wallpaper%20Image%20For%20Free%20Download%20-%20Pngtree.jpeg" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.59" contrast="-0.19" />
+               </effect>
+            </ImageView>
+            <FontAwesomeIconView fill="#ffb000" glyphName="USER" layoutX="174.0" layoutY="95.0" size="4.7EM" text="" />
+            <Label layoutX="96.0" layoutY="109.0" text="Login Account" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="125.0" layoutY="149.0" text="Welcome Back" textFill="#ffb000">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="si_log_Username" layoutX="75.0" layoutY="239.0" prefHeight="34.0" prefWidth="240.0" promptText="Username" styleClass="text-filde" stylesheets="@LoginDesgin.css">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="si_log_Password" layoutX="75.0" layoutY="317.0" prefHeight="34.0" prefWidth="240.0" promptText="Password" styleClass="text-filde" stylesheets="@LoginDesgin.css">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="si_log_LoginBtn" layoutX="76.0" layoutY="410.0" mnemonicParsing="false" onAction="#LoginBtn" prefHeight="34.0" prefWidth="240.0" styleClass="btn-login" stylesheets="@LoginDesgin.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="si_log_CreatBtn" layoutX="78.0" layoutY="466.0" mnemonicParsing="false" onAction="#SwitchForm" prefHeight="34.0" prefWidth="240.0" styleClass="btn-creat" stylesheets="@LoginDesgin.css" text="Do you not have Account?">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="si_log_Forget_password" layoutX="75.0" layoutY="369.0" onAction="#ForgetPasswordLink" text="Forget Password?" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 avr. 2024, 18:54:30
+    Author     : Abderrafie
+*/
+
+/****************************Login Form***********************/
+.text-filde{
+    -fx-background-color: transparent;
+    -fx-border-color: #FFB000;
+    -fx-text-fill: #fff;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+}
+.text-filde:focused{
+    -fx-border-color: #FFB000;
+    -fx-border-width: 2px;
+}
+
+.btn-login{
+    -fx-background-color: #FFB000;
+    
+    -fx-cursor: hand;
+}
+
+.btn-login:hover{
+    -fx-background-color: #F5DD61;
+}
+
+.btn-creat{
+    -fx-background-color: transparent;
+    -fx-text-fill: #fff;
+   -fx-border-color: #FFB000;
+    -fx-cursor: hand;
+
+}
+.btn-creat:hover{
+    -fx-background-color: #FBF6EE;
+    -fx-text-fill: #000;
+        -fx-border-color: #fff;
+
+}
+
+side-white{
+    -fx-background-color: #fff;
+}
+
+.btn-havet{
+     -fx-background-color: transparent;
+    -fx-text-fill: #fff;
+    -fx-border-color: #FFB000;
+    -fx-cursor: hand;
+
+}
+
+
+.text-filde-reg{
+     -fx-background-color: transparent;
+    -fx-border-color: #FFB000;
+    -fx-text-fill: #000;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+}

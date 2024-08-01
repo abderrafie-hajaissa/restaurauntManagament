@@ -1,0 +1,105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30 avr. 2024, 16:47:27
+    Author     : Abderrafie
+*/
+
+
+.nav-bar{
+    -fx-background-color: linear-gradient(to bottom ,#FFB100,FBC252);
+}
+
+.btn-nav{
+    -fx-background-color: transparent;
+    -fx-border-color: #fff;
+    -fx-border-width:2px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size:18px;
+    -fx-border-radius: 15px;
+
+}
+.btn-nav:hover{
+
+    -fx-scale-x: 1.1;
+}
+
+.background{
+    -fx-background-color: linear-gradient(to bottom ,#61481C,#E6B325);
+
+}
+.background:hover{
+
+    -fx-background-color: linear-gradient(to bottom ,#A47E3B,#E6B325);
+    -fx-cursor: hand;
+
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.5),5,0,0,0);
+}
+.white-bg{
+    -fx-background-color: #fff;
+}
+
+.radius{
+    -fx-background-radius: 12px;  
+}
+
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color:linear-gradient(to bottom right ,#61481C,#E6B325); 
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 5px;
+}
+
+.table-view .column-header-background{
+
+    -fx-background-color:linear-gradient(to bottom right ,#61481C,#E6B325); ;
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-background-insets: 0 0 0 0;
+}
+
+.table-view .column-header, .filter{
+
+    -fx-background-color: transparent;
+    -fx-size:40px;
+
+}
+.table-view .column-header .label{
+    -fx-text-fill: #fff;
+}
+
+.btn{
+    -fx-background-color: linear-gradient(to bottom right ,#61481C,#E6B325); ;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-border-radius: 10px;
+}
+.btn:hover{
+    -fx-background-color: linear-gradient(to bottom right ,#3C5B6F,#598bae);
+}
+
+.image_view{
+    -fx-background-color: #fff;
+}
+
+.transparent{
+    -fx-background-color: transparent;
+}
+
+.background-card{
+    -fx-background-color: linear-gradient(to bottom ,#61481C,#E6B325);
+
+}
+
+.border{
+   -fx-border-color: #E6B325;
+    -fx-border-radius: 12px;  
+}

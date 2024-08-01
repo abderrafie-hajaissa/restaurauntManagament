@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="283" pageHeight="425" columnWidth="243" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="217aa44a-b5a3-4dda-a4ba-7f162e503dff">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="getRecipte" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     customer.`id` AS customer_id,
+     customer.`customer_id` AS customer_customer_id,
+     customer.`prod_id` AS customer_prod_id,
+     customer.`prod_name` AS customer_prod_name,
+     customer.`type` AS customer_type,
+     customer.`quantity` AS customer_quantity,
+     customer.`price` AS customer_price,
+     customer.`date` AS customer_date,
+     customer.`image` AS customer_image,
+     customer.`username` AS customer_username,
+     recipte.`id` AS recipte_id,
+     recipte.`customer_id` AS recipte_customer_id,
+     recipte.`total` AS recipte_total,
+     recipte.`date` AS recipte_date,
+     recipte.`username` AS recipte_username
+FROM
+     `customer` customer INNER JOIN `recipte` recipte ON customer.`customer_id` = recipte.`customer_id`
+WHERE
+     recipte.`customer_id` = $P{getRecipte}]]>
+	</queryString>
+	<field name="customer_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_customer_id" class="java.lang.String"/>
+	<field name="customer_prod_id" class="java.lang.String"/>
+	<field name="customer_prod_name" class="java.lang.String"/>
+	<field name="customer_type" class="java.lang.String"/>
+	<field name="customer_quantity" class="java.lang.Integer"/>
+	<field name="customer_price" class="java.lang.Double"/>
+	<field name="customer_date" class="java.sql.Date"/>
+	<field name="customer_image" class="java.lang.String"/>
+	<field name="customer_username" class="java.lang.String"/>
+	<field name="recipte_id" class="java.lang.Integer"/>
+	<field name="recipte_customer_id" class="java.lang.String"/>
+	<field name="recipte_total" class="java.lang.Double"/>
+	<field name="recipte_date" class="java.sql.Date"/>
+	<field name="recipte_username" class="java.lang.String"/>
+	<group name="total">
+		<groupExpression><![CDATA[$F{customer_id}]]></groupExpression>
+		<groupFooter>
+			<band height="32">
+				<staticText>
+					<reportElement x="9" y="11" width="51" height="20" uuid="25bda843-aa6f-4834-b368-2518d3ef8efd"/>
+					<textElement textAlignment="Center">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[TOTAL : ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="52" y="11" width="62" height="20" uuid="2d6c7b86-5327-400a-85dd-645a8e7a11b9"/>
+					<textElement textAlignment="Center">
+						<font size="13"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{recipte_total}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="106" y="11" width="23" height="20" uuid="5706250e-6846-4bb7-bfbb-1826c3c93006"/>
+					<textElement>
+						<font size="13"/>
+					</textElement>
+					<text><![CDATA[DH]]></text>
+				</staticText>
+				<line>
+					<reportElement x="2" y="8" width="241" height="1" uuid="14058026-5ebb-47e1-af05-cd3481c27c62"/>
+					<graphicElement>
+						<pen lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement x="44" y="75" width="167" height="22" uuid="bbb37954-e623-4d47-afae-a4bd502d02cc"/>
+				<textElement>
+					<font fontName="Berlin Sans FB Demi" size="15"/>
+				</textElement>
+				<text><![CDATA[Restauraunt NewSchool]]></text>
+			</staticText>
+			<image>
+				<reportElement x="74" y="-13" width="130" height="100" uuid="c0099211-2cc9-46e7-9165-08d9f926804a"/>
+				<imageExpression><![CDATA["C:\\Java Projet FinEtude\\Restraunt System\\RestrauntSysteme\\src\\image\\Chef-restaurant-logo-illustrations-template-on-transparent-background-PNG-removebg-preview.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="2" y="108" width="241" height="1" uuid="c1f0c5c5-1cd4-475f-ba52-fed6b59cc909"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="165" y="0" width="78" height="13" uuid="7b58d124-c2dc-4dbd-b145-e55f87cbe1d1"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="81" y="93" width="100" height="20" uuid="78a940da-9e39-447e-a680-202949a3c206"/>
+				<text><![CDATA[Restauraunt Tanger]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-1" y="0" width="82" height="13" uuid="7433cbcc-4374-48c1-a857-5af3c4a8ec31"/>
+				<textFieldExpression><![CDATA[$F{customer_username}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="17" uuid="684e3933-a064-4df1-9ba2-2c363bba8f30"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Rounded MT Bold" size="10"/>
+				</textElement>
+				<text><![CDATA[Name Order]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="0" width="58" height="17" uuid="1e3b3754-9097-43f6-88fe-03a26f968932"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Rounded MT Bold" size="10"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="0" width="48" height="17" uuid="bcdb53c6-05db-4bef-a3c2-d65f62d44a29"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Rounded MT Bold" size="10"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="74" height="20" uuid="340bfab9-ef33-4519-8970-4036ff122a36"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_prod_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="0" width="58" height="20" uuid="0c558c0b-f066-4fa0-9d17-72bb4b14b9e9"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="0" width="48" height="20" uuid="98c2d62c-93c4-4faa-8dfd-6612d02be7a8"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_quantity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="56" y="11" width="120" height="14" uuid="7b3a24e1-d1b9-4d43-9e2c-c015e5c9f9d1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Rounded MT Bold" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Thank you For Visit]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="6" width="244" height="1" uuid="ca55400d-4ae6-42ee-9e44-240489d318b5"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="2" splitType="Stretch"/>
+	</summary>
+</jasperReport>

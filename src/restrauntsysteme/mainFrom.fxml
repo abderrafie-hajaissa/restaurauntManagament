@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="1231.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restrauntsysteme.mainFormController">
+   <children>
+      <AnchorPane fx:id="mainForm" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="156.0" layoutY="126.0" prefHeight="600.0" prefWidth="1110.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="607.0" prefWidth="235.0" stylesheets="@mainFormDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="770.0" fitWidth="475.0" layoutX="-191.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-94.0" AnchorPane.topAnchor="-7.0">
+                           <image>
+                              <Image url="@../image/🥘.jpeg" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.47" />
+                           </effect>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="205.0" prefHeight="28.0" prefWidth="180.0" text="Welcome Back" textFill="#ffbd00">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Username" alignment="CENTER" layoutX="22.0" layoutY="297.0" prefHeight="21.0" prefWidth="202.0" text="Admin" textFill="#ffbb00">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Dashbord_Btn" layoutX="15.0" layoutY="333.0" mnemonicParsing="false" onAction="#displayBtn" prefHeight="38.0" prefWidth="208.0" styleClass="btn-nav" stylesheets="@mainFormDesign.css" text="Dashbord">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="11.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icone/dashboard.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Inventory_Btn" layoutX="17.0" layoutY="384.0" mnemonicParsing="false" onAction="#displayBtn" prefHeight="38.0" prefWidth="208.0" styleClass="btn-nav" stylesheets="@mainFormDesign.css" text="Add To Stock">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="11.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icone/warehouse.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Order_Btn" layoutX="16.0" layoutY="438.0" mnemonicParsing="false" onAction="#displayBtn" prefHeight="38.0" prefWidth="208.0" styleClass="btn-nav" stylesheets="@mainFormDesign.css" text="Order Menu">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icone/menu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Exite_Btn" layoutX="19.0" layoutY="494.0" mnemonicParsing="false" onAction="#extiSystem" prefHeight="43.0" prefWidth="205.0" styleClass="btn-nav" stylesheets="@mainFormDesign.css" text="Sign Out">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icone/logout(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="112.0" layoutY="236.0" text="To" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="258.0" text="Restraunt " textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="143.0" layoutY="258.0" text="System" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="213.0" fitWidth="254.0" layoutX="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/b22822f9d6d3850a985af2421bee6d05-removebg-preview.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" contrast="1.0" />
+                           </effect>
+                        </ImageView>
+                        <Separator layoutX="24.0" layoutY="196.0" prefHeight="4.0" prefWidth="194.0" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashborrd_Form" layoutX="94.0" layoutY="172.0" prefHeight="622.0" prefWidth="1015.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="19.0" prefHeight="641.0" prefWidth="960.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="19.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="border" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="2.0" layoutY="30.0" prefHeight="598.0" prefWidth="348.0">
+                                       <children>
+                                          <AnchorPane layoutX="24.0" layoutY="78.0" prefHeight="141.0" prefWidth="290.0" stylesheets="@mainFormDesign.css">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="background" />
+                                             </styleClass>
+                                             <children>
+                                                <ImageView fitHeight="64.0" fitWidth="68.0" layoutX="14.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icone/money.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="65.0" layoutY="14.0" text="Today's Earnings" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dahbord_TodayE" alignment="CENTER_RIGHT" layoutX="39.0" layoutY="57.0" prefHeight="58.0" prefWidth="197.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="31.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="234.0" layoutY="70.0" text="DH" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="28.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="24.0" layoutY="242.0" prefHeight="134.0" prefWidth="291.0" stylesheets="@mainFormDesign.css">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="background" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                             <children>
+                                                <ImageView fitHeight="59.0" fitWidth="68.0" layoutX="14.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icone/profits.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="87.0" layoutY="14.0" prefHeight="26.0" prefWidth="129.0" text="Total Profits" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dahbord_TotalP" alignment="CENTER_RIGHT" layoutX="80.0" layoutY="63.0" prefHeight="38.0" prefWidth="154.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="53.0">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="31.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="233.0" layoutY="66.0" text="DH" textFill="WHITE" AnchorPane.rightAnchor="12.0">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="28.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="22.0" layoutY="402.0" prefHeight="138.0" prefWidth="295.0" stylesheets="@mainFormDesign.css">
+                                             <styleClass>
+                                                <String fx:value="background" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                             <children>
+                                                <ImageView fitHeight="63.0" fitWidth="58.0" layoutX="14.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icone/out-of-stock.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="dahbord_ProductSold" alignment="CENTER" layoutX="72.0" layoutY="63.0" prefHeight="41.0" prefWidth="223.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="33.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" layoutX="87.0" layoutY="14.0" prefHeight="26.0" prefWidth="146.0" text="Products sold" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Arial Rounded MT Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="336.0" layoutY="20.0" prefHeight="606.0" prefWidth="615.0" styleClass="radius" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="336.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="20.0">
+                                       <children>
+                                          <AreaChart fx:id="dahbord_ChartTotal" layoutX="-22.0" layoutY="22.0" prefHeight="564.0" prefWidth="620.0" title="Chart For Total Profits In Day" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="-22.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="22.0">
+                                            <xAxis>
+                                              <CategoryAxis prefHeight="24.0" prefWidth="566.0" side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="invontory_Form" layoutX="137.0" layoutY="125.0" prefHeight="622.0" prefWidth="870.0" stylesheets="@mainFormDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="32.0" prefHeight="474.0" prefWidth="637.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="32.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="border" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="Inventory_TableView" layoutX="14.0" layoutY="48.0" onMouseClicked="#ClickData" prefHeight="458.0" prefWidth="734.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="48.0">
+                                      <columns>
+                                        <TableColumn fx:id="invontory_col_ProductID" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="invontory_col_ProductName" prefWidth="109.0" text="PRODUCT NAME" />
+                                          <TableColumn fx:id="invontory_col_Type" prefWidth="74.0" text="TYPE" />
+                                          <TableColumn fx:id="invontory_col_Stock" prefWidth="90.0" text="STOCK" />
+                                          <TableColumn fx:id="invontory_col_Price" prefWidth="97.0" text="PRICE (DH)" />
+                                          <TableColumn fx:id="invontory_col_Statue" prefWidth="92.0" text="STATUE" />
+                                          <TableColumn fx:id="invontory_col_Date" prefWidth="108.0" text="DATE" visible="false" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <TextField fx:id="invotory_search" layoutX="27.0" layoutY="12.0" onKeyTyped="#invontroySreache" prefHeight="30.0" prefWidth="222.0" promptText="Searche" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                                    <FontAwesomeIconView fill="#a46602" glyphName="SEARCH" layoutX="224.0" layoutY="34.0" size="20" wrappingWidth="11.142857551574707" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="656.0" layoutY="32.0" prefHeight="570.0" prefWidth="206.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="32.0">
+                                 <styleClass>
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="border" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="17.0" prefHeight="17.0" prefWidth="80.0" text="ID :">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="19.0" layoutY="130.0" prefHeight="17.0" prefWidth="54.0" text="Type : ">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="19.0" layoutY="76.0" text="Product Name : ">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="inventory_ProductID" layoutX="19.0" layoutY="44.0" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                                    <TextField fx:id="inventory_ProductName" layoutX="19.0" layoutY="97.0" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                                    <ComboBox fx:id="inventory_ListType" layoutX="19.0" layoutY="153.0" onAction="#listQuestionType" prefWidth="150.0" promptText="Chose your Type" styleClass="text-filde" stylesheets="@LoginDesgin.css" />
+                                    <Label layoutX="20.0" layoutY="190.0" prefHeight="17.0" prefWidth="67.0" text="Stock :">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="inventory_Stock" layoutX="19.0" layoutY="215.0" promptText="0" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                                    <Label layoutX="21.0" layoutY="253.0" prefHeight="17.0" prefWidth="80.0" text="Price (MAD) :">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="inventory_Price" layoutX="20.0" layoutY="278.0" promptText="0.0 MAD" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css" />
+                                    <Label layoutX="20.0" layoutY="316.0" prefHeight="17.0" prefWidth="106.0" text="Statue Product :">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="inventory_Statue" layoutX="20.0" layoutY="342.0" onAction="#ListquestionStatue" prefWidth="150.0" promptText="Chose Statue Produc" styleClass="text-filde" stylesheets="@LoginDesgin.css" />
+                                    <AnchorPane layoutX="29.0" layoutY="404.0" prefHeight="128.0" prefWidth="143.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="85.0">
+                                       <children>
+                                          <ImageView fx:id="invontory_imageView" fitHeight="127.0" fitWidth="144.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="image_view" />
+                                          <String fx:value="border" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <Button fx:id="invontory_ImportBtn" layoutX="17.0" layoutY="563.0" mnemonicParsing="false" onAction="#inventorybtnImport" prefHeight="40.0" prefWidth="167.0" styleClass="btn" stylesheets="@mainFormDesign.css" text="Uplode image" AnchorPane.bottomAnchor="14.0">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/icons8-import-100.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="17.0" layoutY="516.0" prefHeight="84.0" prefWidth="629.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="224.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="border" />
+                                 </styleClass>
+                                 <children>
+                                    <Button fx:id="Inventory_AddBtn" alignment="CENTER" layoutX="53.0" layoutY="16.0" mnemonicParsing="false" onAction="#inventoryAdd" prefHeight="54.0" prefWidth="144.0" stylesheets="@mainFormDesign.css" text="Add">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/icons8-add-100.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="Inventory_UpdateBtn" layoutX="210.0" layoutY="15.0" mnemonicParsing="false" onAction="#inventoryUpdateBtn" prefHeight="54.0" prefWidth="149.0" stylesheets="@mainFormDesign.css" text="Update">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/mettre-a-jour-les-fleches.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="Inventory_DeleteBtn" layoutX="369.0" layoutY="15.0" mnemonicParsing="false" onAction="#inventoryDeleteBtn" prefHeight="54.0" prefWidth="149.0" stylesheets="@mainFormDesign.css" text="Delete">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/supprimer.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="Inventory_ClearBtn" layoutX="526.0" layoutY="15.0" mnemonicParsing="false" onAction="#InventoryClearBtn" prefHeight="54.0" prefWidth="140.0" stylesheets="@mainFormDesign.css" text="Clear">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/icons8-clear-100.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Order_Form" layoutX="14.0" layoutY="14.0" prefHeight="669.0" prefWidth="991.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="4.0" layoutY="14.0" prefHeight="545.0" prefWidth="663.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="321.0" AnchorPane.topAnchor="25.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <ScrollPane fx:id="Menu_ScrollPane" layoutX="10.0" layoutY="11.0" prefHeight="606.0" prefWidth="617.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="11.0">
+                                       <content>
+                                          <GridPane fx:id="menu_GridPane" prefHeight="13.0" prefWidth="77.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                          </GridPane>
+                                       </content>
+                                       <styleClass>
+                                          <String fx:value="border" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="667.0" layoutY="15.0" prefHeight="628.0" prefWidth="297.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="border" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="Menu_tableView" layoutX="6.0" layoutY="14.0" onMouseClicked="#menuSelectOrder" prefHeight="360.0" prefWidth="284.0">
+                                      <columns>
+                                        <TableColumn fx:id="Menu_col_ParoductName" prefWidth="94.0" text="Product Name" />
+                                        <TableColumn fx:id="Menu_col_quantity" prefWidth="97.0" text="Quantity" />
+                                          <TableColumn fx:id="Menu_col_price" prefWidth="89.0" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                    <Label alignment="CENTER" layoutX="44.0" layoutY="424.0" text="TOTAL : ">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Menu_Total" alignment="CENTER" layoutX="127.0" layoutY="424.0" prefHeight="17.0" prefWidth="124.0" text="0.0 DH">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="19.0" layoutY="517.0" prefHeight="27.0" prefWidth="78.0" text="BLANCE :">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Menu_change" alignment="CENTER" layoutX="129.0" layoutY="517.0" prefHeight="17.0" prefWidth="124.0" text="0.0 DH">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="19.0" layoutY="469.0" prefHeight="27.0" prefWidth="92.0" text="AMOUNT :">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="Menu_Amount" alignment="CENTER" layoutX="116.0" layoutY="462.0" onAction="#DisplayAmount" prefHeight="40.0" prefWidth="162.0" promptText="0.0DH" styleClass="text-filde-reg" stylesheets="@LoginDesgin.css">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></TextField>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="15.0" layoutY="578.0" prefHeight="80.0" prefWidth="652.0" stylesheets="@mainFormDesign.css" AnchorPane.bottomAnchor="11.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="border" />
+                                 </styleClass>
+                                 <children>
+                                    <Button fx:id="Menu_RemoveBtn" layoutX="494.0" layoutY="9.0" mnemonicParsing="false" onAction="#menuRemoveBtn" prefHeight="62.0" prefWidth="147.0" text="DELETE">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="37.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/trash.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="Menu_ReciepteBtn" layoutX="338.0" layoutY="11.0" mnemonicParsing="false" onAction="#menuReceiptBtn" prefHeight="59.0" prefWidth="142.0" stylesheets="@mainFormDesign.css" text=" PRINT">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/receipt.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="Menu_PayBtn" layoutX="6.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuPayBtn" prefHeight="65.0" prefWidth="164.0" text="PAY NOW">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/pay.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="Menu_clear" layoutX="176.0" layoutY="8.0" mnemonicParsing="false" onAction="#MenueClear" prefHeight="65.0" prefWidth="150.0" text="CLEAR ORDER">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icone/icons8-clear-100.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
